@@ -1,11 +1,11 @@
 package com.kotlin.superweather.ui.weather
 
-import android.location.Location
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.kotlin.superweather.logic.Repository
-import com.kotlin.superweather.logic.model.PlaceResponse
+import com.kotlin.superweather.logic.model.Location
 
 /**
  * @Author: ksoldboy
@@ -28,7 +28,7 @@ class WeatherViewModel : ViewModel() {
     }
 
     fun refreshWeather(lng: String, lat: String) {
-        locationLiveData.value = Location(lng, lat)
+        locationLiveData.value = Location(lng,lat)
     }
 
 }

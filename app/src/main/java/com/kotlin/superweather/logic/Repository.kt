@@ -1,6 +1,7 @@
 package com.kotlin.superweather.logic
 
 import androidx.lifecycle.liveData
+import com.kotlin.superweather.logic.dao.PlaceDao
 import com.kotlin.superweather.logic.model.DailyResponse
 import com.kotlin.superweather.logic.model.Place
 import com.kotlin.superweather.logic.model.Weather
@@ -63,5 +64,10 @@ object Repository {
             emit(result)
         }
 
+    fun savePlace(place:Place) = PlaceDao.savePlace(place)
+
+    fun getSavedPlace() = PlaceDao.getSavedPlace()
+
+    fun isPlaceSaved() = PlaceDao.isPlaceSaved()
 
 }
